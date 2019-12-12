@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- css Style 추가-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<!-- 제이쿼리 라이브러리 추가 -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<!--데이터를 입력하는 다양한 방법에 대해 알아본다.-->
+			<!-- label for="id" 레이블을 누르면 해당 id로 포커스를 준다-->
+			<!-- for 와 id를 사용하여 서로간의 포커스를 넘겨 받을수있다. -->
+			<!-- fieldcontain 레이블+입력창을 한줄로 나열해 준다.-->
+			<!-- fieldset data-role="controlgroup" 아이템들을 묶어준다. -->
+			<!-- name은 변수 역할을 한다. 서버나 js에서 사용할때 사용한다.-->
+			<!-- input 데이터 형식(type)에 따라 입력 방법이 달라진다.-->
+				<!-- type="checkbox"는 체크박스 name을 개별로 준다.-->
+				<!-- type="radio"는 name을 이용해 하나의 변수처리해준다.-->
+				<!-- type="range"는 min="0" max="100" 슬라이드 바(시크바)같은 형태 최소 최대값을 넣을 수 있다.-->
+				<!-- type="search"는 데이터 검색창 과 같은 형태 -->
+			<!-- select-option 콤보박스(spinner)와 같은 형태-->
+				<!-- data-role="slider" 스위치같은 형태 -->
+			<!-- textarea 텍스트를 여러줄 입력할 때 사용-->
+		
+		<!-- 메인 페이지 -->
+		<div data-role="page">
+			<div data-role="header" data-theme="b" data-position="fixed">
+				<h1>모바일 입력 양식</h1>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label for="height">키</label>
+					<input type="text" id="height"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="weight">몸무게</label>
+					<input type="password" id="weight"/>
+				</div>
+				<button>
+					비만도체크
+				</button>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>취미선택</legend>
+						<label for="check-1">등산</label>
+						<input type="checkbox" id="check-1" name="check-1"/>
+						<label for="check-2">독서</label>
+						<input type="checkbox" id="check-2" name="check-2"/>
+						<label for="check-3">게임</label>
+						<input type="checkbox" id="check-3" name="check-3"/>
+						<label for="check-4">명상</label>
+						<input type="checkbox" id="check-4" name="check-4"/>
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>성별</legend>
+						<label for="radio-1">남성</label>
+						<input type="radio" id="radio-1" name="radiovalue" checked=""/>
+						<label for="radio-2">여성</label>
+						<input type="radio" id="radio-2" name="radiovalue"/>
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<label>여행지 선택</label>
+						<select>
+							<option>서울타워</option>
+							<option>불국사</option>
+							<option>세미원</option>
+							<option>해운대</option>
+							<option>63빌딩</option>
+						</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label>전등</label>
+					<select data-role="slider">
+						<option>Off</option>
+						<option>On</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label>메모</label>
+					<textarea></textarea>
+				</div>
+				<div data-role="fieldcontain">
+					<label>수량</label>
+					<input type="range" min="0" max="100"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label>검색</label>
+					<input type="search"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
