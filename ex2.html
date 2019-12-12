@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- css Style 추가-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<!-- 제이쿼리 라이브러리 추가 -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+
+	<!--ListView--> 
+		<!-- 이미지는 아무리 커도 크기를 80px 사이즈로 줄여준다.-->
+		<!--data-inset 내부로 padding 효과를 준다.-->
+		<!--data-filter 리스트검색을 할 수 있다.-->
+	<!--header + footer 를 toolbar라고 부른다. -->
+		<!--data-position="fixed" 화면이 스크롤되도 고정으로 보이게 한다.-->
+
+		<!-- 메인 페이지 -->
+		<div data-role="page">
+			<div data-role="header" data-theme="b" data-position="fixed">
+				<h1>지하철노선도</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<li data-role="list-divider">분당선</li>
+					<li>
+						<a href="#ori">
+							<img src="images/Koala.jpg" alt=""/>
+							<h3>오리역</h3>
+							<p>클릭하시면 주변 상가 안내합니다.</p>
+						</a>
+						<a href="#ori" data-icon="search"></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/Desert.jpg" alt=""/>
+							<h3>미금역</h3>
+							<p>클릭하시면 주변 상가를 안내합니다.</p>
+							<span class="ui-li-count">신분당선</span>
+						</a>
+					</li>
+					<li><a href="#">정자역</a></li>
+					<li><a href="#">수내역</a></li>
+					<li><a href="#">서현역</a></li>
+					<li><a href="#">이매역</a></li>
+					<li><a href="#">야탑역</a></li>
+					<li><a href="#">모란역</a></li>
+					<li><a href="#">태평역</a></li>
+					<li><a href="#">가천대역</a></li>
+					<li><a href="#">복정역</a></li>
+					<li><a href="#">수서역</a></li>
+					<li><a href="#">대모산입구역</a></li>
+					<li><a href="#">개포역</a></li>
+					<li><a href="#">구룡역</a></li>
+					<li><a href="#">도곡역</a></li>
+					<li><a href="#">한티역</a></li>
+					<li><a href="#">선릉역</a></li>
+					<li><a href="#">선정릉역</a></li>
+					<li><a href="#">강남구청역</a></li>
+					<li><a href="#">압구정로데오역</a></li>
+					<li><a href="#">서울숲역</a></li>
+					<li><a href="#">왕십리역</a></li>
+				</ul>
+			</div>
+			<div data-role="footer" data-theme="b" data-position="fixed">
+				<h1>이젠 아카데미 컴퓨터</h1>
+			</div>
+		</div>
+		<!-- 오리역 안내 페이지 -->
+		<div data-role="page" id="ori">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>오리역 노선 안내</h1>
+			</div>
+			<div data-role="content">
+				<img src="images/오리.PNG" alt=""/>
+			</div>
+		</div>
+		
+	</body>
+</html>
