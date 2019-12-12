@@ -15,6 +15,28 @@
 		<!-- 제이쿼리 라이브러리 추가 -->
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script>
+			$(function () {
+				$('button').click(function () {
+					var h=$('#height').val();
+					var w=$('#weight').val();
+					var st=(h-100)*0.9;
+					if(st+5<w){
+						$('#result').html('살 좀 빼시오');
+					}else if(st-5>w){
+						$('#result').html('팍팍 드시오');
+					}else {
+						$('#result').html('오 건강하네')
+					}
+				});
+				$('#search').on('keyup',function (event){
+					if(event.keyCode == 13){
+						window.open('https://kin.naver.com/search/list.nhn?query='+
+						$(this).val(),'','width=500, height=700');
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<!--데이터를 입력하는 다양한 방법에 대해 알아본다.-->
@@ -98,7 +120,10 @@
 				</div>
 				<div data-role="fieldcontain">
 					<label>검색</label>
-					<input type="search"/>
+					<input type="search" id="search"/>
+				</div>
+				<div>
+					<p id="result">결과는??</p>
 				</div>
 			</div>
 		</div>
