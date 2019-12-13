@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- css Style 추가-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<!-- 제이쿼리 라이브러리 추가 -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<!--메인 페이지-->
+		<div data-role="page">
+			<div data-role="header" data-theme="b">
+				<h1>모바일 레이아웃</h1>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label for="id-input">아이디</label>
+					<input type="text" id="id-input"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="pw-input">비밀번호</label>
+					<input type="password" id="pw-input"/>
+				</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a"><a href="#" data-role="button">로그인</a></div>
+					<div class="ui-block-b"><a href="#" data-role="button">취소</a></div>
+				</div>
+			</div>
+			<div data-role="footer">
+				
+			</div>
+		</div>
+	</body>
+</html>
