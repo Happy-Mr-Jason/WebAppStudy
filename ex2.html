@@ -24,11 +24,27 @@
 		<!--data-filter 리스트검색을 할 수 있다.-->
 	<!--header + footer 를 toolbar라고 부른다. -->
 		<!--data-position="fixed" 화면이 스크롤되도 고정으로 보이게 한다.-->
-
+		<!--header에 <a></a>태그를 추가하면 툴바버튼이 된다.-->
+		<!--class="ui-btn-left"  왼쪽에 배치  class="ui-btn-right" 오른쪽에 배치-->
+		<!--툴바 header 에는 왼쪽 오른쪽 두개의 버튼만 넣을 수 있다.-->
+		<!--툴바 footer 에는 넣는 순서대로 넣을 수 있다.-->
+		<!--navbar 메뉴를 추가한다. 5개 까지는 한줄에 들어가고 더 늘어나면 두개씩 여러줄로 나오게 된다.-->
 		<!-- 메인 페이지 -->
-		<div data-role="page">
+		<div data-role="page" id="main">
 			<div data-role="header" data-theme="b" data-position="fixed">
+				<a href="#" data-icon="home" class="ui-btn-left">Home</a>
 				<h1>지하철노선도</h1>
+				<a href="#" data-icon="gear" class="ui-btn-right">Setting</a>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" class="ui-btn-active">분당선</a></li>
+						<li><a href="#">1호선</a></li>
+						<li><a href="#">2호선</a></li>
+						<li><a href="#">3호선</a></li>
+						<li><a href="#">4호선</a></li>
+						<li><a href="#">5호선</a></li>
+					</ul>
+				</div>
 			</div>
 			<div data-role="content">
 				<ul data-role="listview" data-inset="true" data-filter="true">
@@ -73,12 +89,29 @@
 				</ul>
 			</div>
 			<div data-role="footer" data-theme="b" data-position="fixed">
-				<h1>이젠 아카데미 컴퓨터</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#">분당선</a></li>
+						<li><a href="#">1호선</a></li>
+						<li><a href="#">2호선</a></li>
+						<li><a href="#">3호선</a></li>
+						<li><a href="#">4호선</a></li>
+						<li><a href="#">5호선</a></li>
+					</ul>
+				</div>
+				<a href="#" data-icon="plus">Add</a>
+				<a href="#" data-icon="delete">Delete</a>
+				<a href="#" data-icon="refresh">Refresh</a>
+				<a href="#" data-icon="heart">Heart</a>
+				<a href="#" data-icon="star">Favorite</a>
+				<a href="#" data-icon="refresh">Refresh</a>
+				<a href="#" data-icon="refresh">Refresh</a>
 			</div>
 		</div>
 		<!-- 오리역 안내 페이지 -->
 		<div data-role="page" id="ori">
-			<div data-role="header" data-add-back-btn="true">
+			<div data-role="header" >
+				<a href="#main" data-icon="home">Home</a>
 				<h1>오리역 노선 안내</h1>
 			</div>
 			<div data-role="content">
