@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- css Style 추가-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<!-- 제이쿼리 라이브러리 추가 -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<!--data-role="panel" 사이드 패널 만들기 -->
+			<!--data-position="right" 오른쪽에서 나오기-->
+			<!--data-display="push" 옆으로 메인화면을 밀어버리기-->
+			<!--data-display="overlay" 메인화면 위로 나오기-->
+			<!--data-display="reveal" 메인화면 위로 나오기-->
+		<!--메인 페이지-->
+		<div data-role="page">
+			<div data-role="panel" id="panel" data-position="left" data-display="push">
+				<h2>전체메뉴</h2>
+				<h3>홈</h3>
+				<h3>커뮤니티</h3>
+				<h3>이벤트</h3>
+				<a href="#" data-rel="close">패널닫기</a>
+			</div>
+			<div data-role="header" data-theme="b">
+				<h1>모바일 패널</h1>
+			</div>
+			<div data-role="content">
+				<a href="#panel">패널열기</a><br/>
+				<h1>여기는 메인페이지</h1>
+				<img src="images/10.png"/>
+			</div>
+		</div>
+	</body>
+</html>
