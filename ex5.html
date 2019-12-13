@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- css Style 추가-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<!-- 제이쿼리 라이브러리 추가 -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<!--css/jquery.mobile-1.4.5.min.css의 내부 클래스를 이용한다.-->
+		<!--class="ui-grid-a" 스마트폰의 화면을 2등분해서 나눠준다-->
+		<!--class="ui-grid-b" 스마트폰의 화면을 3등분해서 나눠준다-->
+		<!--class="ui-grid-c" 스마트폰의 화면을 4등분해서 나눠준다-->
+		<!--class="ui-block-a" 1번째 화면-->
+		<!--class="ui-block-b" 2번째 화면-->
+		<!--class="ui-block-c" 2번째 화면-->
+		<!--메인 페이지-->
+		<div data-role="page">
+			<div data-role="header" data-theme="b">
+				<h1>모바일 레이아웃</h1>
+			</div>
+			<div data-role="content">
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><h1>대한민국</h1></div>
+					<div class="ui-block-b"><h1>일본</h1></div>
+					<div class="ui-block-c"><h1>필리핀</h1></div>
+					<div class="ui-block-a"><h1>라오스</h1></div>
+					<div class="ui-block-b"><h1>베트남</h1></div>
+					<div class="ui-block-c"><h1>태국</h1></div>
+				</div>
+			</div>
+			<div data-role="footer">
+				
+			</div>
+		</div>
+	</body>
+</html>
