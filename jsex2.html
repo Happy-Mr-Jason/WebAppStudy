@@ -14,15 +14,23 @@
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<!-- My JavaScript-->
 		<script>
-			//create function
-			function hello(){
-				//alert window
-				alert("안녕하세요");	
-			}
+			// var price1 = 3000;
+			// var price2 = 6000;
+			// var price3 = 3000;
+			// var totalprice = price1 + price2 + price3;
+			// var result1 = totalprice >10000 ? (totalprice-10000)+"원 초과": "돈 관리 잘했어요!";
+			// document.write(result1 + "     ");
+			
+			var q1 = 1200;
+			var q2 = 1300;
+			var q3 = 1000;
+			var avg = (q1+q2+q3)/3;
+			var q4 = prompt("4분기 판매량을 입력하세요");
+			var result2 = q4 >= avg? "판매량이 평균이상입니다." : "판매량이 평균 미달입니다.";
+			document.write(result2);
 		</script>
 	</head>
 	<body>
-		<!-- call the hello function -->
-		<h1 onclick="hello();">자바스크립트</h1>
+		<h1>자바스크립트</h1>
 	</body>
 </html>
