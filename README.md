@@ -12,10 +12,8 @@
 ### ex7.html : Panel
 ### ex8.html : Page Change
 
-
 # JavaScript Study Beginner
 
-##  
-
-### jsex1.html : fist html for js
-### menu.js : fist js file
+### jsex1.html : first html for js
+### jsex2.html : JavaScript in html
+### menu.js : first js file
