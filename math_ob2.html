@@ -13,7 +13,7 @@
 		<!-- Jquery Library -->
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script>
-			document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+			document.write("<h1>컴퓨터 가위, 바위, 보 게임</h1>");
 			
 			var game = prompt("가위, 바위, 보 중 선택하세요?", "가위");
 			var gameNum;
@@ -32,29 +32,17 @@
 			}
 			var com = Math.ceil(Math.random()*3);
 			
-			document.write("<img src='images/math_img_"+com+".jpg'>");
+			document.write("<img src='images/math_img_"+gameNum+".jpg'>");
+			document.write("<img src='images/math_img_"+com+".jpg'><br/>");
+			document.write("<h1><pre>         나                    컴퓨터</pre></h1>");	
 			
 			var result = "";
 			if(gameNum == com){
-				result = "비겼습니다.";
-			} else if(gameNum == 1){
-				if(com==2){
-					result = "당신이 졌습니다.";
-				} else{
-					result = "당신이 이겼습니다."
-				}
-			} else if(gameNum == 2){
-				if(com==3){
-					result = "당신이 졌습니다.";
-				} else{
-					result = "당신이 이겼습니다.";
-				}
-			} else if(gameNum == 3){
-				if(com==1){
-					result = "당신이 졌습니다.";
-				} else{
-					result = "당신이 이겼습니다.";
-				}
+				result = "<h1>비겼습니다.</h1>";
+			} else if((gameNum == 1 && com == 3) || (gameNum == 2 && com == 1) || (gameNum == 3 && com == 2)) {
+					result = "<h1>당신이 이겼습니다.</h1>"
+			} else {
+					result = "<h1>당신이 졌습니다.</h1>";
 			}
 			document.write(result);
 		
