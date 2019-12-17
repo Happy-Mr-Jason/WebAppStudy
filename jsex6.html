@@ -13,12 +13,16 @@
 		<!-- Jquery Library -->
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script>
-			function na(names){
-				document.write(names + '님 안녕하세요');	
+			var person ={
+				name : '홍길동',
+				eat : function (food){
+					alert(this.name + '이' + food + '를(을) 먹습니다.');
+				} 
 			};
+			person.eat('국수');
 		</script>
 	</head>
 	<body>
-		<button onclick="na('김철수')">이름은?</button>		
+		
 	</body>
 </html>
