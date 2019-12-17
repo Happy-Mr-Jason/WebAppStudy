@@ -17,4 +17,7 @@
 ### jsex1.html : first html for js
 ### jsex2.html : JavaScript in html
 ### menu.js : first js file
-### visual studio code git test
+### jsex4.html : Array, for, while
+### jsex5.html : Object
+### jsex6.html : Object Inner Function
+### math_ob2 : Math Object
