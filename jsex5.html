@@ -15,14 +15,31 @@
 		<script>
 			// Object 정의/생성하기
 			// var Object명 = {속성 : 값;, 속성 : 값, 속성 : 값}
-			var product = {
+			/*var product = {
 				제품명 : '망고통조림',
 				가격 : 5000,
 				원산지 : '필리핀',
 				성분 : '망고, 설탕, 황색소'
 			};
 			document.write(product['제품명']);
-			document.write(product.원산지)
+			document.write(product.원산지)*/
+			var student={
+				이름 : '홍길동',
+				국어 : 92, 수학 : 98,
+				영어 : 75, 과학 : 86
+			};
+			var total = student.국어 + student.수학 + student.영어 + student.과학;
+			var avg = total / 4;
+			document.write(student.이름 + "의 성적표" + '<br/>');
+			document.write('========================'+'<br/>');
+			document.write('국어 : ' + student.국어 + '<br/>');
+			document.write('수학 : ' + student.수학 + '<br/>');
+			document.write('영어 : ' + student.영어 + '<br/>');
+			document.write('과학 : ' + student.과학 + '<br/>');
+			document.write('총점 : ' + total + '<br/>');
+			document.write('평균 : ' + avg + '<br/>');
+			document.write('========================'+ '<br/>');
+			document.write('수고하셨습니다.');
 		</script>
 	</head>
 	<body>
