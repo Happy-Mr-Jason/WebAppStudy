@@ -13,10 +13,24 @@
 		<!-- 제이쿼리 라이브러리 추가 -->
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script>
-			var fruit = ['바나나', '망고', '사과', '포도'];
+			/*var fruit = ['바나나', '망고', '사과', '포도'];
 			for(var i = 0; i< fruit.length; i++){
 				document.write(fruit[i] + '<br/>');	
+			}*/
+			/*var i = 0;
+			while(i<fruit.length){
+				document.write(fruit[i] + '<br/>')
+				i++;
+			};*/
+			var i=1;
+			while(true){
+				alert(i+'번째 인사합니다. 안녕하세요');
+				if(!confirm('인사 계속 할까요?')){
+					break;
+				}
+				i++;
 			}
+			alert('안녕히 계세요');
 		</script>
 	</head>
 	<body>
