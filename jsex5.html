@@ -30,16 +30,20 @@
 			};
 			var total = student.국어 + student.수학 + student.영어 + student.과학;
 			var avg = total / 4;
-			document.write(student.이름 + "의 성적표" + '<br/>');
-			document.write('========================'+'<br/>');
-			document.write('국어 : ' + student.국어 + '<br/>');
-			document.write('수학 : ' + student.수학 + '<br/>');
-			document.write('영어 : ' + student.영어 + '<br/>');
-			document.write('과학 : ' + student.과학 + '<br/>');
-			document.write('총점 : ' + total + '<br/>');
-			document.write('평균 : ' + avg + '<br/>');
-			document.write('========================'+ '<br/>');
-			document.write('수고하셨습니다.');
+			var output = '';
+			with(student){
+				output += 이름 + "의 성적표" + '<br/>';
+				output += '========================'+'<br/>';
+				output += '국어 : ' + 국어 + '<br/>';
+				output += '수학 : ' + 수학 + '<br/>';
+				output += '영어 : ' + 영어 + '<br/>';
+				output += '과학 : ' + 과학 + '<br/>';
+				output += '총점 : ' + total + '<br/>';
+				output += '평균 : ' + avg + '<br/>';
+				output += '========================'+ '<br/>';
+				output += '수고하셨습니다.';
+			}
+			document.write(output);
 		</script>
 	</head>
 	<body>
