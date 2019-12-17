@@ -34,11 +34,30 @@
 			
 			document.write("<img src='images/math_img_"+com+".jpg'>");
 			
+			var result = "";
 			if(gameNum == com){
-				document.write("<img src = 'images/game_1.jpg'>");
-			} else {
-				document.write("<img src = 'images/game_2.jpg'>");
+				result = "비겼습니다.";
+			} else if(gameNum == 1){
+				if(com==2){
+					result = "당신이 졌습니다.";
+				} else{
+					result = "당신이 이겼습니다."
+				}
+			} else if(gameNum == 2){
+				if(com==3){
+					result = "당신이 졌습니다.";
+				} else{
+					result = "당신이 이겼습니다.";
+				}
+			} else if(gameNum == 3){
+				if(com==1){
+					result = "당신이 졌습니다.";
+				} else{
+					result = "당신이 이겼습니다.";
+				}
 			}
+			document.write(result);
+		
 		</script>
 	</head>
 	<body>
