@@ -14,22 +14,29 @@
 			//Window Object is least Top Object
 			//setTimeout : Excutes function Delaied
 			//setInterval : Excutes function Frequently
+			//s is Object variable.
+			//clearInterval : Clear the Interval
 			var site=['www.kbs.co.kr', 'www.sbs.co.kr', 'www.imbc.co.kr'];
 			var index=0;
+			var s;
 			setTimeout(function (){
 				window.open('http://www.naver.com', 'child1', 'width=600, height=300');
 			},1000);
-			setInterval(function (){
+			s=setInterval(function (){
 				window.open('http://'+site[index],'child2', 'width=600, height=300');
 				index++;
 				if(index >= site.length){
 					index = 0;
 				}
 			},3000);
+			function popstop(){
+				clearInterval(s);
+			}
 		</script>
 	</head>
 	<body>
 		<h1>길동이의 홈페이지</h1>
 		<p>저의 홈페이지를 방문해 주셔서 감사합니다.</p>
+		<button onclick="popstop()">광고 안보기</button>
 	</body>
 </html>
