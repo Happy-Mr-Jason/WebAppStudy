@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			//child variable contains window
+			//moveTo : move window to x,y Absolute position
+			//moveBy : move window to x,y Relative position
+			//screen : Monitor
+			//resizeTo : Change Absolute size
+			//resizeBy : Change Relative size 
+			var child = window.open('','','width=300, height=200');
+			child.document.write('<h1>다음주 수요일은 수업이 없습니다.</h1>');
+			var w = screen.width;
+			var h = screen.height;
+			child.moveTo(300,400);
+			child.resizeTo(w,h);
+			setInterval(function () {
+				child.resizeBy(-20,-20);
+				child.moveBy(10,10);
+			}, 1000);
+		</script>
+	</head>
+	<body>
+		<h1>길동이의 홈페이지</h1>
+		<p>저의 홈페이지를 방문해 주셔서 고맙습니다.</p>
+	</body>
+</html>
