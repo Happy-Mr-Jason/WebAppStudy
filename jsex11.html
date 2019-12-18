@@ -13,12 +13,19 @@
 		<!-- Jquery Library -->
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script>
-			//getElementById : 
+			//createElement : everyTag
+			//createTextMode : create text
+			//appendChild : add text as child
 			window.onload=function () {
-				setTimeout(() => {
-					var h = document.getElementById('abc');
-					h.innerHTML='오늘은 수요일';	
-				}, 3000);
+				var h=document.createElement('p');
+				var t=document.createTextNode('저의 홈페이지를 방문해 주셔서 감사합니다.');
+				h.appendChild(t);
+				document.body.appendChild(h);
+				var image=document.createElement('img')
+				image.src='images/Koala.jpg'
+				image.width = 500;
+				image.height = 350;
+				document.body.appendChild(image);
 			};
 		</script>
 	</head>
