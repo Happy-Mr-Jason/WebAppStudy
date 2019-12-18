@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			//Window Object is least Top Object
+			//setTimeout : Excutes function Delaied
+			//setInterval : Excutes function Frequently
+			var site=['www.kbs.co.kr', 'www.sbs.co.kr', 'www.imbc.co.kr'];
+			var index=0;
+			setTimeout(function (){
+				window.open('http://www.naver.com', 'child1', 'width=600, height=300');
+			},1000);
+			setInterval(function (){
+				window.open('http://'+site[index],'child2', 'width=600, height=300');
+				index++;
+				if(index >= site.length){
+					index = 0;
+				}
+			},3000);
+		</script>
+	</head>
+	<body>
+		<h1>길동이의 홈페이지</h1>
+		<p>저의 홈페이지를 방문해 주셔서 감사합니다.</p>
+	</body>
+</html>
