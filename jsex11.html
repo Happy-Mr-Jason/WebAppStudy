@@ -17,16 +17,23 @@
 			//createTextMode : create text
 			//appendChild : add text as child
 			window.onload=function () {
+				var d = new Date();
+				var month = d.getMonth();
 				var h=document.createElement('p');
-				var t=document.createTextNode('저의 홈페이지를 방문해 주셔서 감사합니다.');
+				var t=document.createTextNode(month + '월입니다.');
 				h.appendChild(t);
 				document.body.appendChild(h);
-				var image=document.createElement('img')
-				image.src='images/Koala.jpg'
+				var image=document.createElement('img');
+				
+				if(2< month && month <10){
+					image.src='images/Koala.jpg';
+				}else {
+					image.src='images/Penguins.jpg';
+				}
 				image.width = 500;
 				image.height = 350;
 				document.body.appendChild(image);
-			};
+			};		
 		</script>
 	</head>
 	<body>
