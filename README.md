@@ -21,3 +21,7 @@
 ### jsex5.html : Object
 ### jsex6.html : Object Inner Function
 ### math_ob2 : Math Object
+### jsex8.html : Browser Object Model : Window Object
+### jsex9.html : moveTo moveBy resizeTo resizeBy
+### jsex10.html : location
+### jsex11.html : DOM(Document Object Model)
