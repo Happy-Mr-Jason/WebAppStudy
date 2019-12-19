@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		// select a element with a property
+		// $(Selector).css('PropertyName','Value');
+		// select a element with multiple properties
+		// $(Selector).css({
+		// 		PropertyName : 'Value',
+		// 		PropertyName : 'Value',
+		// 		PropertyName : 'Value'
+		//});
+		// select a element specified by attributefilter
+		//$('Selector[attributeFilter1][attributeFilter2][attributeFilter3]')
+		//[name='value'] Attribute Equals Selector : Selects elements that have the specified attribute with a value exactly equal to a certain value.
+		//[name$='value'] Attribute Ends With Selector : Selects elements that have the specified attribute with a value exactly equal to a certain value.
+		//[name*='value'] Attribute Contains Selector : Selects elements that have the specified attribute with a value containing a given substring.
+		//[name^='value'] Attribute Starts With Selector :Selects elements that have the specified attribute with a value beginning exactly with a given string. 
+		//[name~='value'] Attribute Contains Word Selector : Selects elements that have the specified attribute with a value containing a given word, delimited by spaces. 
+		//[name!='value'] Attribute Not Equal Selector : Select elements that either don’t have the specified attribute, or do have the specified attribute but not with a certain value.
+		//[name|='value'] Attribute Contains Prefix Selector : Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).
+
+		$(document).ready(function () {
+			$('img').css({
+				width:300,
+				height:400,
+			});
+			$('img[src$="png"]').css('border','5px solid red');
+			$('img[src$="jpg"]').css('border','5px solid red');
+			$('img[src$="gif"]').css('border','5px solid red');
+			$('input[type="text"]').val('gildong');
+		});
+	</script>
+</head>
+
+<body>
+	<img src="images/jajq.png"/>
+	<img src="images/node.jpg"/>
+	<img src="images/ux.gif"/>
+	<input type="text">
+	<br/>
+	<input type="password">
+</body>
+
+</html>
