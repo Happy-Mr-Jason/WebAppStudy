@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			//
+			$(document).ready(function (){
+				$('h1:odd').css('background','orange');
+				$('h1:even').css('background','orange');
+				$('h1:last').css('background','orange');
+				$('h1:first').css('background','orange');
+				$('h1:eq(0)').css('background','orange');
+				$('h1:eq(-1)').css('background','orange');
+			});
+		</script>
+	</head>
+	<body>
+		<h1>월요일</h1>
+		<h1>화요일</h1>
+		<h1>수요일</h1>
+		<h1>목요일</h1>
+		<h1>금요일</h1>
+		<h1>토요일</h1>
+		<h1>일요일</h1>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			//Select selected element
+			$(document).ready(function (){
+				setTimeout(function (){
+					var value = $('select>option:selected').val();
+					alert('오늘 점심은 ' + value + '입니다.');
+				},5000)
+			});
+		</script>
+	</head>
+	<body>
+		<h2>메뉴를 5초안에 고르시오</h2>
+		<select>
+			<option>김치찌개</option>
+			<option>된장찌개</option>
+			<option>칼국수</option>
+			<option>순대국</option>
+			<option>생선구이</option>
+		</select>
+	</body>
+</html>
