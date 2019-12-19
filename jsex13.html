@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		// $ : Determiner of jquery
+		// $('selector').method(); : selector have to wrap using ''.
+		// .css(property, value) : change the Value of the CSS Property to value.
+		// .ready() : Specify a function to execute when the DOM(Document Object Model) is fully loaded.
+		// How to use Selector----------------------------------------------
+		// using , to select multi elements.
+		// using '*' to select all elements.
+		// using '#id' to select a single element with the given id attribute.(id is uniqued)
+		// using '.class' to select all elements with the given class.(class can be used duplicatable)
+		$(document).ready(function () {
+			$('.target').css('color', 'red');
+			$('.item').css('background','yellow');
+		});
+	</script>
+</head>
+
+<body>
+	<h1>제이쿼리 시작</h1>
+	<p class="target item">자바스크립트 라이브러리</p>
+	<h1 id="animal">동물원 소개</h1>
+	<ul>
+		<li>호랑이</li>
+		<li class="target">기린</li>
+		<li>코끼리</li>
+	</ul>
+</body>
+
+</html>
