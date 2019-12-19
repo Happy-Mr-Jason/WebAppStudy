@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			// Child Selector('parent>child')
+			// selects all direct child elements specified by 'child' of elements specified by 'parent'
+			// all child selector('parent child')
+			// selects all direct child elements specified by all 'child' of elements specified by 'parent'
+			$(document).ready(function () {
+				$('#abc>h1').css('color','blue')
+				$('#abc h1').css('color','orange')
+			});
+		</script>
+	</head>
+	
+	<body>
+		<h1>제이쿼리 시작</h1>
+		<p>자바스크립트 라이브러리</p>
+		<h1>동물원 소개</h1>
+		<ul>
+			<li>호랑이</li>
+			<li>기린</li>
+			<li>코끼리</li>
+		</ul>
+		<div id="abc">
+			<h1>나는 다른 영역</h1>
+			<ol>
+				<h1>여기는 또다른 child</h1>
+				<li>자바스크립트</li>
+				<li>제이쿼리</li>
+				<li>하이브리드앱</li>
+			</ol>
+		</div>
+	</body>
+</html>
