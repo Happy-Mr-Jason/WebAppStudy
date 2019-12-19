@@ -25,3 +25,10 @@
 ### jsex9.html : moveTo moveBy resizeTo resizeBy
 ### jsex10.html : location
 ### jsex11.html : DOM(Document Object Model)
+### jsex12.html : JQuery Basic
+### jsex13.html : Kinds of Selectors
+### jsex14.html : Selector (Parent>Child) ('Parent Child')
+### jsex15.html : Multiple Property, Atrributes Selector
+### jsex16.html : Basic Filter
+### jsex17.html : Basic Filter
+
