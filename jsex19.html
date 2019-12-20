@@ -22,7 +22,7 @@
 		<script>
 			//.each : Iterate over a jQuery object, executing a function for each matched element.
 			//using this instead of item
-
+			//Ex4. Every Function can have a anonymouse function has index
 			$(document).ready(function () {
 				// Ex1.
 				// for(var i = 0 ; i < 5 ; i++){
@@ -40,24 +40,22 @@
 				// });
 				
 				//Ex4.
-				$('#amount').click(function (){
-					var re;
-					re=abc(21);
-					alert("결과="+re);
+				// $('#amount').click(function (){
+				// 	var re;
+				// 	re=abc(21);
+				// 	alert("결과="+re);
+				// });
+
+				//Ex5.
+				$('h1').addClass(function (index){
+					return 'high-light-' + index;
 				});
-
 			});
-
-			function abc(age){
-				var r;
-				r=age*3;
-				return r;
-			};
 		</script>
 	</head>
 	<body>
-		<h1 id="amount">나이는?</h1>
-		<h1 id="result">결과???</h1>
+		<h1 >자바스크립트</h1>
+		<h1 >제이쿼리</h1>
 		<h1>하이브리드앱</h1>
 		<h1>아두이노</h1>
 		<h1>임베디드 프로그래밍</h1>
