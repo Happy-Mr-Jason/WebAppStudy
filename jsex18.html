@@ -19,8 +19,14 @@
 		</style>
 		<script>
 			//addClass : Adds the specified class(es) to each element in the set of matched elements.
+			//removeClass : Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+			//hover : Bind one or two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.			
 			$(document).ready(function (){
-				$('h1').addClass('high-light');
+				$('h1').hover(function (){
+					$(this).addClass('high-light');
+				}, function (){
+					$(this).removeClass('high-light');
+				})
 			});
 		</script>
 	</head>
