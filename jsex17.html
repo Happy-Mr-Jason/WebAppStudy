@@ -11,24 +11,26 @@
 		<!-- Jquery Library -->
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script>
-			//
+			//nth-child : Selects all elements that are the nth-child of their parent.
 			$(document).ready(function (){
-				$('h1:odd').css('background','orange');
-				$('h1:even').css('background','orange');
-				$('h1:last').css('background','orange');
-				$('h1:first').css('background','orange');
-				$('h1:eq(0)').css('background','orange');
-				$('h1:eq(-1)').css('background','orange');
+				// $('tr:odd').css('background', '#B7F0B1');
+				// $('tr:even').css('background', '#c0c0c0');
+				// $('tr:first').css({background : '#000000', color : '#ffffff'});
+				$('tr:first').css({background : '#000000', color : '#ffffff'});
+				$('td:nth-child(3n+1)').css('background', '#B7F0B1');
+				$('td:nth-child(3n+2)').css('background', '#FFC19E');
+				$('td:nth-child(3n)').css('background', '#B2EBF4');
 			});
 		</script>
 	</head>
 	<body>
-		<h1>월요일</h1>
-		<h1>화요일</h1>
-		<h1>수요일</h1>
-		<h1>목요일</h1>
-		<h1>금요일</h1>
-		<h1>토요일</h1>
-		<h1>일요일</h1>
+		<table>
+			<tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+			<tr><td>김철수</td><td>O형</td><td>서울시 송파구</td></tr>
+			<tr><td>이영희</td><td>AB형</td><td>성남시 분당구</td></tr>
+			<tr><td>홍길동</td><td>A형</td><td>용인시 기흥구</td></tr>
+			<tr><td>손흥민</td><td>B형</td><td>영국 런던</td></tr>
+			<tr><td>류현진</td><td>AB형</td><td>미국 로스엔젤레스</td></tr>
+		</table>
 	</body>
 </html>
