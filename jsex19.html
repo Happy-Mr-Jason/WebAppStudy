@@ -35,16 +35,29 @@
 				// });
 			
 				// Ex3.
-				$('h1').each(function (index){
-					$(this).addClass('high-light-' + index);
-				});
+				// $('h1').each(function (index){
+				// 	$(this).addClass('high-light-' + index);
+				// });
 				
+				//Ex4.
+				$('#amount').click(function (){
+					var re;
+					re=abc(21);
+					alert("결과="+re);
+				});
+
 			});
+
+			function abc(age){
+				var r;
+				r=age*3;
+				return r;
+			};
 		</script>
 	</head>
 	<body>
-		<h1>자바스크립트</h1>
-		<h1>제이쿼리</h1>
+		<h1 id="amount">나이는?</h1>
+		<h1 id="result">결과???</h1>
 		<h1>하이브리드앱</h1>
 		<h1>아두이노</h1>
 		<h1>임베디드 프로그래밍</h1>
