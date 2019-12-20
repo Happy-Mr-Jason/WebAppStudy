@@ -21,15 +21,14 @@
 		<script>
 			//Events Methods can not has Index in inner function
 			//instead of Index, It has Event.
+			//then If you want using Index in Event method.
+			//have to use $(this).index() 
 			$(document).ready(function () {
 				var result=['맑으며 기온은 영하 5도','금요일입니다.','크리스마스입니다.'];
 				// $('h1').click(function (index) {  // !!error
-				$('h1').click(function (Event) {
-					if(Event.shiftKey){
-						alert('영하 5도');
-					} else {
-						alert('날씨 맑음');
-					}
+				$('h1').click(function () {
+					i=$(this).index();
+					$(this).html(result[i]);
 				});				
 			});
 		</script>
