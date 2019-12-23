@@ -18,20 +18,18 @@
 			}
 		</style>
 		<script>
-			// html : Get the HTML contents of the first element in the set of matched elements 
-			//		  or set the HTML contents of every matched element.
-			// text : Get the combined text contents of each element in the set of matched elements, including their descendants, 
-			//        or set the text contents of the matched elements.
-			// different between html and text : html has tag function. text has only text
 			$(document).ready(function () {
-				$('div').html('<h1>오늘은 월요일</h1>');
-				$('div').text('<h1>오늘은 화요일</h1>');
+				$('h1').click(function () {
+					var index = $(this).index()
+					$(this).html(function (index, html) {
+						return html + '♥';
+					});
+				});
 			});
 		</script>
 	</head>
 	<body>
-		<div>
-
-		</div>
+		<h1>김철수</h1>
+		<h1>홍길동</h1>
 	</body>
 </html>
