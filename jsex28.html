@@ -18,18 +18,24 @@
 			}
 		</style>
 		<script>
+			//remove :  Remove the set of matched elements from the DOM.
 			$(document).ready(function () {
+				/*
 				$('h1').click(function () {
 					var index = $(this).index()
 					$(this).html(function (index, html) {
 						return html + '♥';
 					});
 				});
+				*/
+				$('h1').first().remove();
 			});
 		</script>
 	</head>
 	<body>
-		<h1>김철수</h1>
-		<h1>홍길동</h1>
+		<div>
+			<h1>김철수</h1>
+			<h1>홍길동</h1>
+		</div>
 	</body>
 </html>
