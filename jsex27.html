@@ -18,18 +18,20 @@
 			}
 		</style>
 		<script>
-			// .removeAttr : Remove an attribute from each element in the set of matched elements.
 			$(document).ready(function () {
-				$('button').click(function () {
-					$('img').removeAttr('src');
+				var colors = ['red','green','blue']
+				$('h1').css({
+					color : function (index) {
+					return colors[index];
+					},
+					background : 'yellow'
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<button>장바구니 비우기</button>
-		<div>
-			<img src="images/box1.png">
-		</div>
+		<h1>자바스크립트</h1>
+		<h1>제이쿼리</h1>
+		<h1>하이브리드앱</h1>
 	</body>
 </html>
