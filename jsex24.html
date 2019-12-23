@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<style>
+			.colorPallet{
+				background: cyan;
+			}
+		</style>
+		<script>
+			//.add Method : Create a new jQuery object with elements added to the set of matched elements.
+			//.parent : Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
+			//.children : Get the children of each element in the set of matched elements, optionally filtered by a selector.
+			//.find : Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
+			$(document).ready(function (){
+				//$('h1:eq(0)').css('background','orange');
+				// $('h1').eq(0).css('background','orange');
+				// $('h1').first(0).css('background','orange');
+				// $('h1').last(0).css('background','orange');
+				$('h1').css('background','orange').add('p').css('color','red');
+			});
+		</script>
+	</head>
+	<body>
+		<h1>자바스크립트</h1>
+		<p>정적인 홈페이지를 동적으로 만들어주는 프로그램</p>
+		<h1>제이쿼리</h1>
+		<p>자바스크립트를 쉽게 구현해 주는 라이브러리</p>
+		<h1>하이브리드앱</h1>
+		<p>html,css,javascript를 가지고 만드는 앱</p>
+	</body>
+</html>
