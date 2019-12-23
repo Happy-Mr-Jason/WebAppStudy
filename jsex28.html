@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<title>Js Study</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ezen" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- Jquery Library -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<style>
+			.colorPallet{
+				background: cyan;
+			}
+		</style>
+		<script>
+			// html : Get the HTML contents of the first element in the set of matched elements 
+			//		  or set the HTML contents of every matched element.
+			// text : Get the combined text contents of each element in the set of matched elements, including their descendants, 
+			//        or set the text contents of the matched elements.
+			// different between html and text : html has tag function. text has only text
+			$(document).ready(function () {
+				$('div').html('<h1>오늘은 월요일</h1>');
+				$('div').text('<h1>오늘은 화요일</h1>');
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+
+		</div>
+	</body>
+</html>
