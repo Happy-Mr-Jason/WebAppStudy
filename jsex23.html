@@ -18,13 +18,25 @@
 			}
 		</style>
 		<script>
+			// .filter Method : Reduce the set of matched elements to those that match the selector or pass the function’s test.
+			// .filter Method and Method chain effect
+			// .end Method : End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
 			$(document).ready(function (){
+				/*
 				$('h1').filter(function (index) {
 					return index % 3 == 0 ;
 				}).css({
 					backgroundColor:'yellow',
 					color:'red'
 				});
+				*/
+				/*
+				$('h1').css('background', 'orange');
+				$('h1:even').css('color', 'white');
+				$('h1:odd').css('color', 'red');
+				*/
+				// $('h1').css('background', 'orange').filter(':even').css('color','white').filter(':odd').css('color','red');
+				$('h1').css('background', 'orange').filter(':even').css('color','white').end().filter(':odd').css('color','red');
 			});
 		</script>
 	</head>
