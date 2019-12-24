@@ -17,28 +17,29 @@
 		.colorPallet {
 			background: cyan;
 		}
-		#canvas {
-			border: 3px solid black;
-			/* position: relative;
-			left: 100px;
-			top: 50px; */
-		}
 	</style>
 	<script>
 		//.off : Remove an event handler.
+		var amount = [3,2,5];
 		$(document).ready(function () {
 			$('h1').click(function () {
-				alert($(this).html() + '님 안녕하세요');
-				$(this).off();
+				var index = $(this).index();
+				if(amount[index] > 0){
+				amount[index] -= 1;
+				alert($(this).html() + '를 구입해 주셔서 고맙습니다. (남은수량 : ' + amount[index] + '대)');
+				}
+				if(amount[index] == 0){
+					alert($(this).html() + '가 완판되었습니다.')
+				}
 			});
 		});
 	</script>
 </head>
 
 <body>
-	<h1>김철수</h1>
-	<h1>이영희</h1>
-	<h1>홍길동</h1>
+	<h1>냉장고</h1>
+	<h1>세탁기</h1>
+	<h1>청소기</h1>
 </body>
 
 </html>
