@@ -17,19 +17,29 @@
 		.colorPallet {
 			background: cyan;
 		}
+		h1{
+			cursor: pointer;
+		}
 	</style>
 	<script>
 		//.off : Remove an event handler.
-		var amount = [3,2,5];
 		$(document).ready(function () {
+			var amount = [3,2,5];
+			var index;
 			$('h1').click(function () {
-				var index = $(this).index();
+				index = $(this).index();
 				if(amount[index] > 0){
-				amount[index] -= 1;
+				amount[index]--;
 				alert($(this).html() + '를 구입해 주셔서 고맙습니다. (남은수량 : ' + amount[index] + '대)');
 				}
 				if(amount[index] == 0){
-					alert($(this).html() + '가 완판되었습니다.')
+					alert($(this).html() + '가 매진되었습니다.!!')
+					$(this).off();
+					$(this).css({
+						cursor:'default',
+						color: 'gray'
+					});
+					$(this).html($(this).html() + ' 매진!!');
 				}
 			});
 		});
