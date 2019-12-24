@@ -24,14 +24,22 @@
 	</style>
 	<script>
 		//.on : Attach an event handler function for one or more events to the selected elements.
+		// Compare with .hover()
+		// .hover() : Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.
+		//            two handlers are same as mouseenter and mouseleave.
 		$(document).ready(function () {
 			$('h1').on('click', function () {
 				$(this).html(function (index, html) {
 					return html + '★';
 				});
 			});
-			$('h1').on('mouseenter', function() {
-				$(this).addClass('reverse');
+			$('h1').on({
+				mouseenter : function () {
+					$(this).addClass('reverse');
+				},
+				mouseleave : function () {
+					$(this).removeClass('reverse');
+				}
 			});
 		});
 	</script>
