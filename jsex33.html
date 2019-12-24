@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+		#canvas {
+			border: 3px solid black;
+			/* position: relative;
+			left: 100px;
+			top: 50px; */
+		}
+	</style>
+	<script>
+		//.offset : Get the current coordinates of the first element in the set of matched elements, relative to the document.
+		//.getElementById : returns the element that has the ID attribute with the specified value
+		//<canvas> : used to draw graphics
+		//			.getContext : returns an object that provides methods and properties for drawing on the canvas
+		//			.beginPath : Begins a path, or resets the current path
+		//			.moveTo : Moves the path to the specified point in the canvas, without creating a line
+		//			.lineTo : Adds a new point and creates a line to that point from the last specified point in the canvas
+		//			.stroke : Actually draws the path you have defined
+		$(document).ready(function () {
+			var canvas = document.getElementById('canvas');
+			var context = canvas.getContext('2d');
+			var position, x, y;
+			var sw = false
+			$('#clear').click(function () {
+				canvas.width = canvas.width;
+			});
+			$('#color').on('change',function () {
+				context.strokeStyle = $(this).val();
+			});
+			$(canvas).on({
+				mousedown : function (event) {
+					sw = true;
+					position = $(this).offset();
+					x=event.pageX-position.left;
+					y=event.pageY-position.top;
+					context.beginPath();
+					context.moveTo(x,y);
+				},
+				mousemove : function (event) {
+					if(sw == true){
+					position = $(this).offset();
+					x=event.pageX-position.left;
+					y=event.pageY-position.top;
+					context.lineWidth = $('select>option:selected').val();
+					context.lineTo(x,y);
+					context.stroke();
+					};
+				},
+				mouseup : function (event) {
+					sw = false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<select>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+	</select>
+	<input type="color" id="color"/>
+	<button id="clear">지우기</button><br />
+	<canvas id="canvas" width="800" height="500" ></canvas>
+</body>
+
+</html>
