@@ -17,39 +17,29 @@
 		.colorPallet {
 			background: cyan;
 		}
-		h1{
-			cursor: pointer;
+		#canvas {
+			border: 3px solid black;
+			/* position: relative;
+			left: 100px;
+			top: 50px; */
 		}
 	</style>
 	<script>
 		//.off : Remove an event handler.
+		//.one : Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
 		$(document).ready(function () {
-			var amount = [3,2,5];
-			var index;
-			$('h1').click(function () {
-				index = $(this).index();
-				if(amount[index] > 0){
-				amount[index]--;
-				alert($(this).html() + '를 구입해 주셔서 고맙습니다. (남은수량 : ' + amount[index] + '대)');
-				}
-				if(amount[index] == 0){
-					alert($(this).html() + '가 매진되었습니다.!!')
-					$(this).off();
-					$(this).css({
-						cursor:'default',
-						color: 'gray'
-					});
-					$(this).html($(this).html() + ' 매진!!');
-				}
+			$('h1').one('click',function () {
+				alert($(this).html() + '님 안녕하세요');
+				$(this).off();
 			});
 		});
 	</script>
 </head>
 
 <body>
-	<h1>냉장고</h1>
-	<h1>세탁기</h1>
-	<h1>청소기</h1>
+	<h1>김철수</h1>
+	<h1>이영희</h1>
+	<h1>홍길동</h1>
 </body>
 
 </html>
