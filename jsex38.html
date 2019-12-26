@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+
+		* {
+			margin: 5px;
+			padding: 5px;
+			border: 3px solid black;
+		}
+	</style>
+	<script>
+		//event.preventDefault() : If this method is called, the default action of the event will not be triggered.
+		//event.stopPropagation() : Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+		$(document).ready(function () {
+			$('a').click(function () {
+				$(this).css('background-color', 'blue');
+				// event.preventDefault();
+				// event.stopPropagation();
+				return false;
+			});
+			$('h1').click(function () {
+				$(this).css('background-color', 'red');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>
+		<a href="http://www.kbs.co.kr">한국방송</a>
+	</h1>
+</body>
+
+</html>
