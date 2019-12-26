@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+	</style>
+	<script>
+		//.on( events [, selector ] [, data ], handler )
+		//.on( events [, selector ] [, data ] )
+		//selector A selector string to filter the descendants of the selected elements that trigger the event. 
+		//If the selector is null or omitted, the event is always triggered when it reaches the selected element.
+		$(document).ready(function () {
+			/*$('h1').on('click', function () {
+				var len = $('h1').length;
+				var h = $(this).html();
+				$('#wrap').append('<h1>' + h + '-' + len + '</h1>');
+			});*/
+
+			$('#wrap').on('click', 'h1' , function () {
+				var len = $('h1').length;
+				var h = $(this).html();
+				$('#wrap').append('<h1>' + h + '-' + len + '</h1>');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<h1>메르스</h1>
+	</div>
+</body>
+
+</html>
