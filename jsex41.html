@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+	</style>
+	<script>
+		// window
+		// scroll : Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
+		// console.log : For debugging purposes, you can use the console.log() method to display data.
+		// scrollTop : Get the current vertical position of the scroll bar for the first element in the set of matched elements or
+		//             set the vertical position of the scroll bar for every matched element.
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				//alert('스크롤했나?? ``? ..?');
+				console.log($(window).scrollTop());
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<img src="images/Koala.jpg"/>
+	<img src="images/Penguins.jpg"/>
+	<img src="images/Jellyfish.jpg"/>
+</body>
+
+</html>
