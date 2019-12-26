@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+		#news {
+			display: none;
+		}
+	</style>
+	<script>
+		//show() : Display the matched elements.
+		//show(duration)
+		//show(duration, complete)
+		//  duration : A string or number determining how long the animation will run. 'fast' 'slow' 'normal' or number(ms)
+		//	complete : A function to call once the animation is complete, called once per matched element.
+		$(document).ready(function () {
+			$('button').click(function () {
+				$('#news').show(2000,function () {
+					alert('최신뉴스입니다.');
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<button>뉴스보기</button>
+	<div id="news">
+		<h1>오늘 올해 마지막 부분일식…제주도서 해가림 면적 가장 커</h1>
+		<p>제주도에서 해가 가장 많이 모습을 감춘 현상(일식 면적 19.9%)을 관측할 수 있으며, 북쪽으로 올라갈수록 가려지는 비율이 작아진다.
+
+			이서구 천문연 대국민홍보팀장은 "전국적으로 눈·비가 예보된 데다 날씨가 흐려 일식을 관측하기 쉽지 않아 보인다"며 "오랜 시간 맨눈으로 보면 눈이 상할 위험이 있으니 특수 필터를 사용한 망원경이나 여러 겹의 짙은 색 셀로판지로 관측해 달라"고 당부했다.
+			
+			기상청은 부분 일식이 있는 오후 2∼4시에 서울, 경기도, 강원도는 비가 내리지 않지만 낮게 낀 구름의 두께가 얇아지면서 좁게 하늘이 보이는 흐린 날씨가 이어지겠다고 전망했다. 그밖의 지역에서도 흐린 날씨가 지속해서 일식 관측이 쉽지 않겠다.</p>
+	</div>
+</body>
+
+</html>
