@@ -25,18 +25,28 @@
 		// scrollTop : Get the current vertical position of the scroll bar for the first element in the set of matched elements or
 		//             set the vertical position of the scroll bar for every matched element.
 		$(document).ready(function () {
+			// $(window).scroll(function () {
+			// 	//alert('스크롤했나?? ``? ..?');
+			// 	console.log($(window).scrollTop());
+			// });
+			for (var i = 0 ; i < 20 ; i++) {
+				$('<h1>무한 스크롤 예제</h1>').appendTo('body');			
+			}
 			$(window).scroll(function () {
-				//alert('스크롤했나?? ``? ..?');
-				console.log($(window).scrollTop());
+				var sh = $(window).scrollTop() + $(window).height();
+				var dh = $(document).height();
+				if(sh >= dh-200){
+					for (var i = 0 ; i < 20 ; i++) {
+						$('<h1>무한 스크롤 예제</h1>').appendTo('body');
+					}
+				}
 			});
 		});
 	</script>
 </head>
 
 <body>
-	<img src="images/Koala.jpg"/>
-	<img src="images/Penguins.jpg"/>
-	<img src="images/Jellyfish.jpg"/>
+	
 </body>
 
 </html>
