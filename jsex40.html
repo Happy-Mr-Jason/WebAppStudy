@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+	</style>
+	<script>
+		// keyup : Bind an event handler to the "keyup" JavaScript event, or trigger that event on an element.
+		$(document).ready(function () {
+			$('textarea').keyup(function () {
+				var inputLength = $(this).val().length;
+				var remain = 80 - inputLength;
+				if(remain < 0){
+					$('h1').css('color','red').html('MMS');
+				} else {
+					$('h1').css('color','black').html(remain);
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<p>메모</p>
+	<h1>80</h1>
+	<textarea cols="20" rows="3"></textarea>
+</body>
+
+</html>
