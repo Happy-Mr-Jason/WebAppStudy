@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+		img{
+			width: 50px;
+			height: 50px;
+			position: relative;
+		}
+	</style>
+	<script>
+		//.stop : Stop the currently-running animation on the matched elements.
+		$(document).ready(function () {
+			$('img').click(function () {
+				$(this).animate({
+					left:'1500'
+				},2000);
+			});
+			$('button').click(function () {
+				$('img').stop();
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<button>중지</button><br/>
+	<img src="images/car_purple.jpg"/>
+</body>
+
+</html>
