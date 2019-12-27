@@ -26,12 +26,17 @@
 	<script>
 		$(document).ready(function () {
 			$('img').click(function () {
-				var w = $(this).css('width');
-				var h = $(this).css('height');
+				// var w = $(this).css('width');
+				// var h = $(this).css('height');
+				// $(this).animate({
+				// 	width:parseInt(w)+100,
+				// 	height:parseInt(h)+100
+				// },1000);
 				$(this).animate({
-					width:parseInt(w)+100,
-					height:parseInt(h)+100
+					width:'+=50',
+					height:'+=50'
 				},1000);
+
 			});
 		});
 	</script>
