@@ -17,22 +17,34 @@
 		.colorPallet {
 			background: cyan;
 		}
-		img {
-			display: none;
+		img{
 			position: relative;
 		}
 	</style>
 	<script>
+		//.animate( properties [, duration ] [, easing ] [, complete ] )
+		//Perform a custom animation of a set of CSS properties.
 		$(document).ready(function () {
-			$('img').show(2000,function () {
-				$('img').scrollLeft(1500);
+			$('img').click(function () {
+				$(this).animate({
+					left: 2000,
+					opacity: 0
+				},5000,function () {
+					$(this).css({
+						left:0,
+						opacity:1
+					},'normal')
+				});
 			});
 		});
 	</script>
 </head>
 
 <body>
-	<img src="images/car_purple.jpg"/>
+	<img src="images/car_purple.jpg"/><br />
+	<img src="images/car_green.jpg"/><br />
+	<img src="images/car_red.jpg"/><br />
+	<img src="images/car_yellow.jpg"/><br />
 </body>
 
 </html>
