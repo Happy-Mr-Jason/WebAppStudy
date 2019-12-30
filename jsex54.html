@@ -31,20 +31,41 @@
 		//addClass and removeClass in Jquery Ui Library
 		//.addClass(ClassName , Effect Time)
 		$(document).ready(function () {
-			$('h1').hover(function () {
-				$(this).addClass('reverse', 1000);
-			}, function () {
-				$(this).removeClass('reverse', 1000);
+			// var sw=[false, false, false];
+			// var i;
+			// $('h1').click(function () {
+			// 	i = $(this).index();
+			// 	if(sw[i] == false){
+			// 		$(this).addClass('reverse',1000);
+			// 		sw[i] = true;
+			// 	} else {
+			// 		$(this).removeClass('reverse',1000);
+			// 		sw[i] = false;
+			// 	}
+			// });
+			// $('h1').click(function () {
+			// 	$(this).addClass('reverse',1000);
+			// });
+			// $('h1').filter('.reverse').click(function () {
+			// 	$(this).removeClass('reverse',1000);
+			// });
+			$('h1').click(function () {
+				// if($(this).attr('class') == 'normal'){
+				if($(this).is('.normal')){
+					$(this).switchClass('normal','reverse',1000);
+				} else {
+					$(this).switchClass('reverse','normal',1000);
+				}
 			});
 		});
 	</script>
 </head>
 
 <body>
-	<div id="area">
-		<h1>제이쿼리 UI 플러그인</h1>
-		<h1>새해 복 많이 받으세요</h1>
-		<h1>임베디드 프로그래밍</h1>
+	<div>
+		<h1 class="normal">제이쿼리 UI 플러그인</h1>
+		<h1 class="normal">새해 복 많이 받으세요</h1>
+		<h1 class="normal">임베디드 프로그래밍</h1>
 	</div>
 </body>
 
