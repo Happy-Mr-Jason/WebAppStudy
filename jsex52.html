@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Added UI CSS Style -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!-- Added UI Jquery Library -->
+	<script src="js/jquery-ui.min.js"></script>
+	
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+	</style>
+	<script>
+		//image drag & drom Example using Jquery-UI Library
+		$(document).ready(function () {
+			$('img').draggable();
+			$('h1').draggable();
+		});
+	</script>
+</head>
+
+<body>
+	<div id="area">
+		<img src="images/car_purple.jpg"/>
+		<h1>새해 복 많이 받으세요</h1>
+	</div>
+</body>
+
+</html>
