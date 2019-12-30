@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+	<title>Js Study</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Added UI CSS Style -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<!-- Added UI Jquery Library -->
+	<script src="js/jquery-ui.min.js"></script>
+	
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+		img{
+			position: relative;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			var e;
+			$('img').click(function () {
+				e = $('select>option:selected').val();
+				$(this).animate({
+					left : 1000
+				},3000,e,function () {
+					$(this).delay(1000).animate({
+						left : 0
+					},1);
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<select>
+        <option>linear</option>
+        <option>swing</option>
+        <option>easeInQuad</option>
+        <option>easeOutQuad</option>
+        <option>easeInOutQuad</option>
+        <option>easeInCubic</option>
+        <option>easeOutCubic</option>
+        <option>easeInOutCubic</option>
+        <option>easeInQuart</option>
+        <option>easeOutQuart</option>
+        <option>easeInOutQuart</option>
+        <option>easeInQuint</option>
+        <option>easeOutQuint</option>
+        <option>easeInOutQuint</option>
+        <option>easeInSine</option>
+        <option>easeOutSine</option>
+        <option>easeInOutSine</option>
+        <option>easeInExpo</option>
+        <option>easeOutExpo</option>
+        <option>easeInOutExpo</option>
+        <option>easeInCirc</option>
+        <option>easeOutCirc</option>
+        <option>easeInOutCirc</option>
+        <option>easeInElastic</option>
+        <option>easeOutElastic</option>
+        <option>easeInOutElastic</option>
+        <option>easeInBack</option>
+        <option>easeOutBack</option>
+        <option>easeInOutBack</option>
+        <option>easeInBounce</option>
+        <option>easeOutBounce</option>
+        <option>easeInOutBounce</option>
+    </select>
+	<div id="area">
+		<img src="images/car_purple.jpg"/>
+	</div>
+</body>
+
+</html>
