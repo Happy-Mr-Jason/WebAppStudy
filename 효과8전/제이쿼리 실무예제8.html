@@ -29,11 +29,24 @@
 		<title>jex1</title>
 		<script src="jquery-1.11.3.min.js"></script>
 		<script>
+			var sw = [false,false,false];
+			var pos = [];
 			$(document).ready(function () {
+				var i;
 				$('#blocks>div').click(function () {
-					$(this).animate({
-						top : 100
-					},500);
+					i = $(this).index();
+					if(sw[i] == false){
+						pos[i] = $(this).css('top');
+						$(this).animate({
+							top : 100
+						},500);
+						sw[i] = true;
+					} else {
+						$(this).animate({
+							top : parseInt(pos[i]) 
+						},500);
+						sw[i] = false;
+					}
 				});
 			});
 		</script>
