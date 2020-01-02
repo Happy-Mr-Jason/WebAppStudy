@@ -55,17 +55,20 @@
 ### jsex40.html : .keyup Event
 ### jsex41.html : scroll Example
 ### jsex42.html : .show Display the matched elements
-### jsex43.html : 
-### jsex44.html : 
-### jsex45.html : 
-### jsex46.html : 
-### jsex47.html : 
-### jsex48.html : 
-### jsex49.html : 
-### jsex50.html : 
-### jsex51.html : 
-### jsex52.html : 
-### jsex53.html : 
-### jsex54.html : 
+### jsex43.html : .animation custom animation
+### jsex44.html : animation Example
+### jsex45.html : animation Example
+### jsex46.html : Animation Queue , ClearQueue
+### jsex47.html : .stop animation
+### jsex48.html : .delay delay execution
+### jsex49.html : fadeOut Loop Example
+### jsex50.html : fadeOut Plugin
+### jsex51.html : image drag & drop Example
+### jsex52.html : JQuery UI Library
+### jsex53.html : Jquery UI easing effect
+### jsex54.html : switchClass in JQurey UI Library
+### jsex55.html : Show Hide Toggle Effect in Jquery UI
+### imageSlider.html : Images Slider
+### imageSlider-2.html : Images Slider Auto Manual
 
 
