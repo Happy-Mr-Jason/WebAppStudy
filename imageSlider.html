@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Image Slider</title>
+	<meta name="description" content="" />
+	<meta name="author" content="ezen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Jquery Library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	
+	<style>
+		.colorPallet {
+			background: cyan;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/* 이미지 슬라이드 */
+		.animation_canvas{
+			width: 600px;
+			height: 400px;
+			position: relative;
+			overflow: hidden;
+		}
+		.slider_panel{
+			width: 3000px;
+			position: relative;
+		}
+		.slider_image{
+			width: 600px;
+			height: 400px;
+			float: left;
+		}
+		.slider_text_panel{
+			position: absolute;
+			top: 200px;
+			left: 50px;
+		}
+		.slider_text{
+			position: absolute;
+			width: 250px;
+			height: 150px;
+			color: yellow;
+		}
+		.control_panel{
+			position: absolute;
+			top: 380px;
+			left: 270px;
+			height: 16px;
+			overflow: hidden;
+		}
+		.control_button{
+			background: url(images/point_button.png);
+			float: left;
+			cursor: pointer;
+			position: relative;
+			width: 12px;
+			height: 46px;
+		}
+		.control_button:hover{
+			top: -15px;
+		}
+		.control_button.active{
+			top: -30px;
+		}
+		.left_move{
+			float: left;
+			position: relative;
+			top : -240px;
+			opacity: 0.5;
+			cursor: pointer;
+		}
+		.left_move:hover{
+			opacity: 1;
+		}
+		.right_move{
+			float: right;
+			position: relative;
+			top : -240px;
+			opacity: 0.5;
+			cursor: pointer;
+		}
+		.right_move:hover{
+			opacity: 1;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			var index = 0;
+			moveSlider(index);
+			$('.control_button').click(function () {
+				index = $(this).index();
+				moveSlider(index);
+			});
+			function moveSlider(index) {
+				$('.slider_panel').animate({
+					left : -(index*600)
+				},'slow');
+				$('.control_button').removeClass('active').eq(index).addClass('active');
+				$('.slider_text').css('left',-400);
+				$('.slider_text').stop().eq(index).animate({
+					left : 0
+				},'slow');
+			};
+			$('.left_move').click(function () {
+				if(index > 0){
+					index--;
+					moveSlider(index);
+				} else {
+					alert("처음 이미지입니다.")
+				}
+				if(index < 4){
+					$('.right_move').fadeIn(300);
+				}
+				if(index == 0){
+					$(this).fadeOut(300);
+				}
+			});
+			$('.right_move').click(function () {
+				if(index < 4){
+					index++;
+					moveSlider(index);
+				}else{
+					alert("마지막이미지입니다.");
+					index = 0;
+					moveSlider(0);
+				}
+				if(index >0){
+					$('.left_move').fadeIn(300);
+				}
+				if(index == 4){
+					$(this).fadeOut(300);
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>이미지 슬라이드</h1>
+	<div class="animation_canvas">
+		<div class="slider_panel">
+			<img class="slider_image" src="images/Koala.jpg"/>
+			<img class="slider_image" src="images/Penguins.jpg"/>
+			<img class="slider_image" src="images/Jellyfish.jpg"/>
+			<img class="slider_image" src="images/Lighthouse.jpg"/>
+			<img class="slider_image" src="images/Desert.jpg"/>
+		</div>
+		<div class="slider_text_panel">
+			<div class="slider_text">
+				<h1>Koala</h1>
+				<p>코알라(영어: Koala, 학명: Phascolarctos cinereus)는 코알라과(Phascolarctidae)에 속하는 유일한 종이다.</p>
+			</div>
+			<div class="slider_text">
+				<h1>Penguins</h1>
+				<p>펭귄(penguin, 문화어: 펭긴새)은 펭귄목 펭귄과에 속하는 날지 못하는 새의 총칭이다. 남극, 남아메리카, 남아프리카, 오스트레일리아와 뉴질랜드, 그리고 적도 부근에 산다.</p>
+			</div>
+			<div class="slider_text">
+				<h1>Jellyfish</h1>
+				<p>해파리는 해파리아문(Medusozoa)에 속하는 무척추동물의 총칭이다. 콩보다 작은 것부터 지름이 2m 이상에 이르기까지 종류가 다양하다.</p>
+			</div>
+			<div class="slider_text">
+				<h1>Lighthouse</h1>
+				<p>등대(燈臺)는 램프와 렌즈를 이용해서 불빛을 비추도록 만들어진 탑(塔) 또는 건물을 말한다. 등대는 밤에 항해나 바다의 수로 안내를 돕는 역할을 한다.</p>
+			</div>
+			<div class="slider_text">
+				<h1>Desert</h1>
+				<p>사막(沙漠/砂漠)은 강수량이 적은 지역이다. 사막은 크게 표면 구성 물질에 따라 암석 사막, 모래사막, 자갈사막으로 나뉜다.</p>
+			</div>
+		</div>
+		<div class="control_panel">
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+			<div class="control_button"></div>
+		</div>
+		<div class="horizontal_control_panel">
+			<img class="left_move" src="images/prev.png" />
+			<img class="right_move" src="images/next.png" />
+		</div>
+	</div>
+</body>
+
+</html>
