@@ -93,6 +93,7 @@
 		$(document).ready(function () {
 			var index = 0;
 			moveSlider(index);
+			$('.left_move').fadeOut(300);
 			$('.control_button').click(function () {
 				index = $(this).index();
 				moveSlider(index);
@@ -114,9 +115,7 @@
 				} else {
 					alert("처음 이미지입니다.")
 				}
-				if(index < 4){
-					$('.right_move').fadeIn(300);
-				}
+				$('.right_move').fadeIn(300);
 				if(index == 0){
 					$(this).fadeOut(300);
 				}
@@ -130,9 +129,7 @@
 					index = 0;
 					moveSlider(0);
 				}
-				if(index >0){
-					$('.left_move').fadeIn(300);
-				}
+				$('.left_move').fadeIn(300);
 				if(index == 4){
 					$(this).fadeOut(300);
 				}
